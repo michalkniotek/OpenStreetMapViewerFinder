@@ -1,0 +1,6 @@
+"use strict";
+
+require('sugar');
+
+console.log("hello");
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJhc2ljLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFBOztBQUVoQixPQUFPLENBQUMsR0FBRyxDQUFDLE9BQU8sQ0FBQyxDQUFDIiwiZmlsZSI6ImpzL2Jhc2ljLmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnc3VnYXInKVxuXG5jb25zb2xlLmxvZyhcImhlbGxvXCIpO1xuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
