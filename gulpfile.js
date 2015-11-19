@@ -18,6 +18,7 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var assign = require('lodash.assign');
 var gutil = require('gulp-util');
+var browserifyCss = require('browserify-css');
 
 var src = 'app';
 var out = 'dist';
@@ -25,7 +26,10 @@ var out = 'dist';
 gulp.task('js', bundle); // so you can run `gulp js` to build the file
 
 function bundle() {
-    return browserify(out+'/js/basic.js').bundle()
+    return browserify({
+        entries: out+'/js/basic.js',
+        transform: [browserifyCss]
+    }).bundle()
         // log errors if they happen
         .on('error', gutil.log.bind(gutil, 'Browserify Error'))
         .pipe(source('js/bundle.js'))
@@ -106,6 +110,13 @@ gulp.task('copy', function () {
         .pipe(gulp.dest(out))
 });
 
+gulp.task('copy-bower', function () {
+    gulp.src("bower_components/**/*.*")
+        .pipe(watch("bower_components/**/*.*"))
+        .pipe(plumber())
+        .pipe(gulp.dest(out))
+});
+
 gulp.task('env', function () {
     env({
         vars: {
@@ -140,4 +151,4 @@ gulp.task('watch-all',function(){
     gulp.watch(out+"/js/basic.js",['js']);
 });
 
-gulp.task('watch', ['env', 'sass:dev', 'svg', 'bower', 'jade', 'copy', 'babel' ,'js', 'connect', 'watch-all']);
+gulp.task('watch', ['env', 'sass:dev', 'svg', 'bower', 'jade', 'copy','copy-bower', 'babel' ,'js', 'connect', 'watch-all']);

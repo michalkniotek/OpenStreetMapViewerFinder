@@ -1,0 +1,19 @@
+{
+  "name": "kapsle",
+  "description": "",
+  "main": "",
+  "authors": [
+    "kniotek <michal.kniotek@uj.edu.pl>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/michalkniotek/OpenStreetMapViewerFinder",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

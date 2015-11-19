@@ -1,8 +1,36 @@
 <html>
 <head>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="style/main.css"/>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
 </head>
 <body>
+<div class="padding-top-10">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">OpenStreetMap Finder</div>
+            <div class="panel-body">
+                <form method="get" action="/">
+                    <label>
+            <textarea name="coordinates" id="editor1"
+                      data-address="Kraków"></textarea>
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">OpenStreetMap Viewers</div>
+            <div class="panel-body">
+                <div id="viewer1" data-coordinates='{"x1":"19.9384452362061","x2":"19.934447143554703","y1":"50.0617229003906","y2":"50.057726715087895","x3":"19.936447","y3":"50.0597262"}'></div>
+                <div id="viewer2" data-coordinates='{"x1":"21.9384452362061","x2":"17.934447143554703","y1":"49.0617229003906","y2":"51.057726715087895","x3":"19.936447","y3":"50.0597262"}'></div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="js/bundle.js"></script>
 </body>
 </html>
